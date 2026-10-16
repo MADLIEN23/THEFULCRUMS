@@ -1,0 +1,13 @@
+{
+  "name": "tooltrack",
+  "version": "1.0.0",
+  "description": "ToolTrack - Industrial Equipment Lifecycle and Audit Management System",
+  "private": true,
+  "scripts": {
+    "seed": "npm run seed --prefix backend",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "test:backend": "node backend/test_backend.js",
+    "build:frontend": "npm run build --prefix frontend"
+  }
+}

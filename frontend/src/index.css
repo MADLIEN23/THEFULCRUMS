@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-slate-900 bg-slate-50;
+  }
+}
+
+/* Print Styles for QR Asset Labels and Executive Audit Reports */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-qr-label, #printable-qr-label *,
+  #printable-audit-report, #printable-audit-report * {
+    visibility: visible;
+  }
+  #printable-qr-label, #printable-audit-report {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
